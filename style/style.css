@@ -1,0 +1,443 @@
+.magictime.slideLeftReturn {
+-webkit-animation-duration: 0.5s;
+-moz-animation-duration: 0.5s;
+-o-animation-duration: 0.5s;
+animation-duration: 0.5s;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+a:hover,
+a:focus,
+a:visited,
+a:active {
+  text-decoration: none;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+.content {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px 20px;
+}
+.content p,
+h1 {
+  font-family: 'Open Sans', sans-serif;
+}
+.navigation {
+  width: 100%;
+  height: 70px;
+  background: #262626;
+  font-family: 'Roboto', sans-serif;
+  color: #c9c9c9;
+}
+.navigation a {
+  color: #c9c9c9;
+  text-decoration: none;
+}
+.navigation a:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+.logo{
+  height:60px;
+}
+.brand {
+  position: absolute;
+  float: left;
+  padding-left: 20px;
+  line-height: 70px;
+  text-transform: uppercase;
+}
+.brand a {
+  color: #ffffff;
+  font-size: 1.4em;
+  text-decoration: none;
+  font-weight: 700;
+}
+.brand a:visited,
+.brand a:active {
+  color: #ffffff;
+}
+.brand a:hover {
+  text-decoration: none;
+}
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0px 0px;
+}
+.nav-dropdown {
+  display: none;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+}
+nav {
+  float: right;
+  position: relative;
+  display: inline-block;
+  font-size: .9em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+nav ul {
+  list-style: none;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+nav ul li {
+  float: left;
+  display: inline;
+  position: relative;
+}
+nav ul li a {
+  display: block;
+  color: #a9a9a9;
+  padding: 0 20px;
+  line-height: 70px;
+  background: #262626;
+}
+nav ul li a:hover,
+nav ul li a:focus,
+nav ul li a:active {
+  text-decoration: none;
+  color: #ffffff;
+}
+nav ul li > a:hover {
+  background: #519ae3;
+  color: #ffffff;
+}
+nav ul li > a:not(:only-child):after {
+  padding-left: 4px;
+  content: ' ▾';
+}
+nav ul li ul li {
+  width: 190px;
+}
+nav ul li ul li a {
+  background: #262626;
+  display: block;
+  padding: 15px;
+  line-height: 20px;
+  z-index: 1;
+}
+nav ul li ul li a:hover {
+  background: #519ae3;
+  color: #ffffff;
+}
+/* Mobile navigation */
+.nav-mobile {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #262626;
+  height: 70px;
+  width: 70px;
+}
+@media only screen and (max-width: 800px) {
+  .nav-mobile {
+    display: block;
+  }
+  .logo {
+    position: absolute;
+  }
+  nav {
+    width: 100%;
+    padding: 70px 0 15px;
+  }
+  nav ul {
+    display: none;
+  }
+  nav ul li {
+    width: 100%;
+    float: none;
+  }
+  nav ul li > a {
+    padding: 15px;
+    line-height: 20px;
+  }
+  nav ul li:hover .nav-dropdown {
+    display: none;
+  }
+  nav ul li ul li a {
+    line-height: 20px;
+  }
+  .nav-dropdown {
+    position: static;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 800px) {
+  .nav-list {
+    display: block !important;
+  }
+}
+#nav-toggle {
+  position: absolute;
+  left: 18px;
+  top: 22px;
+  cursor: pointer;
+  padding: 10px 35px 16px 0px;
+}
+#nav-toggle span,
+#nav-toggle span:before,
+#nav-toggle span:after {
+  cursor: pointer;
+  border-radius: 1px;
+  height: 5px;
+  width: 35px;
+  background: #ffffff;
+  position: absolute;
+  display: block;
+  content: '';
+  transition: all 300ms ease-in-out;
+}
+#nav-toggle span:before {
+  top: -10px;
+}
+#nav-toggle span:after {
+  bottom: -10px;
+}
+#nav-toggle.active span {
+  background-color: transparent;
+}
+#nav-toggle.active span:before,
+#nav-toggle.active span:after {
+  top: 0;
+}
+#nav-toggle.active span:before {
+  transform: rotate(45deg);
+}
+#nav-toggle.active span:after {
+  transform: rotate(-45deg);
+}
+
+.row.is-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+.row.is-flex > [class*='col-'] {
+    display: flex;
+    flex-direction: column;
+}
+
+/*
+* And with max cross-browser enabled.
+* Nobody should ever write this by hand. 
+* Use a preprocesser with autoprefixing.
+*/
+.row.is-flex {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.row.is-flex > [class*='col-'] {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.transition {
+    -webkit-transform: scale(1.6); 
+    -moz-transform: scale(1.6);
+    -o-transform: scale(1.6);
+    transform: scale(1.6);
+}
+.thumbnail {
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+
+.anim-appear {
+  opacity: 0.01;
+}
+ 
+.anim-appear.anim-appear-active{
+  opacity: 2;
+  transition: opacity 5s ease-in;
+}
+
+
+html,
+body,
+#root {
+    height: 100%;
+    width: 100%;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.App {
+    position: relative;
+    display: flex;
+    flex-flow: column;
+}
+.TopBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    width: 100%;
+    height: 62px;
+    padding: 0 24px;
+}
+.TopBar a {
+    margin-right: 18px;
+    text-decoration: none;
+}
+.animated-page-wrapper {
+    position: absolute;
+    top: 62px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+// .page {
+//     padding: 0 24px;
+// }
+/*footer*/
+.footer{
+  background-color: grey;
+  height:20vh;
+}
+
+/*Contact form */
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+body {
+  font: 100% 'Roboto', arial, sans-serif;
+  background: #f5f5f5;
+}
+
+form {
+  padding: 2rem;
+  margin-top: 2rem;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 23.75rem;
+  background-color: #fff;
+  border-radius: 3px;
+  box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
+}
+
+// h1 {
+//   margin-top: 0;
+//   margin-bottom: 3.236rem;
+//   text-align: center;
+//   font-size: 1.618rem;
+// }
+
+.form-group {
+  padding: 0;
+  border: 0;
+}
+.form-group + .form-group {
+  margin-top: 1rem;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: .5rem;
+  font-size: .75rem;
+  text-transform: uppercase;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+}
+
+input,
+textarea {
+  display: block;
+  padding: .5rem .75rem;
+  width: 100%;
+  font-size: 1rem;
+  line-height: 1.25;
+  color: #55595c;
+  background-color: #fff;
+  background-image: none;
+  background-clip: padding-box;
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 1px solid #eee;
+  border-left: 0;
+  border-radius: 3px;
+  -webkit-transition: all 0.25s cubic-bezier(0.4, 0, 1, 1);
+  transition: all 0.25s cubic-bezier(0.4, 0, 1, 1);
+}
+input:focus,
+textarea:focus {
+  outline: 0;
+  border-bottom-color: #ffab00;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.btn {
+  display: inline-block;
+  padding: .75rem 1rem;
+  margin-top: 1.618rem;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  vertical-align: middle;
+  white-space: nowrap;
+  background-color: #ffab00;
+  border: 1px solid transparent;
+  box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-transition: all 0.25s cubic-bezier(0.4, 0, 1, 1);
+  transition: all 0.25s cubic-bezier(0.4, 0, 1, 1);
+}
+.btn:focus, .btn:hover {
+  background-color: #ffc142;
+  box-shadow: 0 18px 35px rgba(50, 50, 93, 0.1), 0 8px 15px rgba(0, 0, 0, 0.07);
+}
+.btn:focus {
+  outline: 0;
+}
+
+
