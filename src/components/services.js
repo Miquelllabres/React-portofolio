@@ -1,11 +1,7 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
+import AnimatedWrapper from "./AnimatedWrapper";
 
-class About extends Component {
-
-
-
-
-	
+class Services extends Component {
  render() {
   return (
    <div className="magictime slideLeftReturn" >
@@ -14,15 +10,14 @@ class About extends Component {
         <div className="row">
             <div className="col-sm-12 col-lg-12">
                 <h1 className="h1">
-                    Let,s Talk <small>About me</small></h1>
+                     Services <small>Section</small></h1>
             </div>
         </div>
     </div>
 </div>
-    
    </div>
   )
  }
 }
 
-export default About
+export default Services;

@@ -1,15 +1,23 @@
  import React, { Component } from "react";
 import AnimatedWrapper from "./AnimatedWrapper";
 
-class HomeComponent extends Component {
+class Home extends Component {
  render() {
   return (
-   <div className="page" >
-    <h1>Home</h1>
-    <p>Hello from the home page!</p>
+   <div className="magictime slideLeftReturn" >
+    <div className="jumbotron jumbotron-sm">
+    <div className="container">
+        <div className="row">
+            <div className="col-sm-12 col-lg-12">
+                <h1 className="h1">
+                     Home <small>Section</small></h1>
+            </div>
+        </div>
+    </div>
+</div>
    </div>
   )
  }
 }
-const Home = AnimatedWrapper(HomeComponent);
+
 export default Home;

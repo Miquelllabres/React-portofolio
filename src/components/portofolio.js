@@ -5,16 +5,12 @@ import $ from 'jquery';
 import AnimatedWrapper from "./AnimatedWrapper";
 
 
-// The FullRoster iterates over all of the players and creates
-// a link to their profile page.
-
-
 
 class Portofolio extends Component {
 
   componentDidMount() {
     $(document).ready(function(){
-    $('.thumbnail').addClass('magictime puffIn');
+    $('.thumbnail').addClass('magictime ');
 
     
     });
@@ -26,8 +22,8 @@ render(){
    
   return(
 
-  <div className="row" >
-  <div style={{backgroundImage: "url('../../images/coding.jpg')", backgroundSize: "cover", backgroundRepeat: "no-repeat", height: "200px", width: "100%"}} />
+  <div className="row magictime slideLeftReturn" >
+  <div className="magictime  " style={{backgroundImage: "url('../../images/coding.jpg')", backgroundSize: "cover", backgroundRepeat: "no-repeat", height: "200px", width: "100%"}} />
 
   
      {

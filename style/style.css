@@ -5,6 +5,8 @@
 animation-duration: 0.5s;
 }
 
+
+
 html {
   position: relative;
   min-height: 100%;
@@ -331,20 +333,18 @@ body {
 }
 
 /*Contact form */
-html {
-  box-sizing: border-box;
-  font-size: 16px;
+.jumbotron {
+background: #358CCE;
+color: #FFF;
+border-radius: 0px;
 }
-
-*,
-*:after,
-*:before {
-  box-sizing: border-box;
+.jumbotron-sm { padding-top: 24px;
+padding-bottom: 24px; }
+.jumbotron small {
+color: #FFF;
 }
-
-body {
-  font: 100% 'Roboto', arial, sans-serif;
-  background: #f5f5f5;
+.h1 small {
+font-size: 24px;
 }
 
 form {
@@ -352,34 +352,9 @@ form {
   margin-top: 2rem;
   margin-right: auto;
   margin-left: auto;
-  max-width: 23.75rem;
   background-color: #fff;
   border-radius: 3px;
   box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
-}
-
-// h1 {
-//   margin-top: 0;
-//   margin-bottom: 3.236rem;
-//   text-align: center;
-//   font-size: 1.618rem;
-// }
-
-.form-group {
-  padding: 0;
-  border: 0;
-}
-.form-group + .form-group {
-  margin-top: 1rem;
-}
-
-label {
-  display: inline-block;
-  margin-bottom: .5rem;
-  font-size: .75rem;
-  text-transform: uppercase;
-  -ms-touch-action: manipulation;
-      touch-action: manipulation;
 }
 
 input,
@@ -410,34 +385,4 @@ textarea:focus {
 textarea {
   resize: vertical;
 }
-
-.btn {
-  display: inline-block;
-  padding: .75rem 1rem;
-  margin-top: 1.618rem;
-  font-weight: 400;
-  text-align: center;
-  text-transform: uppercase;
-  color: #fff;
-  vertical-align: middle;
-  white-space: nowrap;
-  background-color: #ffab00;
-  border: 1px solid transparent;
-  box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
-  cursor: pointer;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  -webkit-transition: all 0.25s cubic-bezier(0.4, 0, 1, 1);
-  transition: all 0.25s cubic-bezier(0.4, 0, 1, 1);
-}
-.btn:focus, .btn:hover {
-  background-color: #ffc142;
-  box-shadow: 0 18px 35px rgba(50, 50, 93, 0.1), 0 8px 15px rgba(0, 0, 0, 0.07);
-}
-.btn:focus {
-  outline: 0;
-}
-
 

@@ -22,21 +22,18 @@ const NavBar = () => (
               <a href="#!">Services</a>
               <ul className="nav-dropdown">
                 <li>
-                  <a href="#!">Web Development</a>
+                  <Link to='/services'>Web Development</Link>
                 </li>
                 <li>
-                  <a href="#!">Custom Wordpress Themes</a>
+                  <Link to='/services'>Custom Wordpress Themes</Link>
                 </li>
                 <li>
-                  <a href="#!">Maintenance</a>
+                  <Link to='/services'>Maintenance</Link>
                 </li>
                 <li>
-                  <a href="#!">Apps</a>
+                  <Link to='/services'>Apps</Link>
                 </li>
               </ul>
-            </li>
-            <li>
-             <Link to='/portofolio'>Portofolio</Link>
             </li>
             <li>
              <Link to='/projects'>Projects</Link>

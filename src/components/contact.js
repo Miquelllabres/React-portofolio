@@ -73,36 +73,77 @@ class Contact extends Component {
 
   render() {
     return(
-      <form className='react-form' onSubmit={this.handleSubmit}>
-        <h1>Say Hi!</h1>
-        <fieldset className='form-group'>
-          <ReactFormLabel htmlFor='formName' title='Full Name:' />
-
-          <input id='formName' className='form-input' name='name' type='text' ref='formName' required onChange={this.handleChange} value={this.state.name} />
-        </fieldset>
-        
-        <fieldset className='form-group'>
-          <ReactFormLabel htmlFor='formEmail' title='Email:' />
-
-          <input id='formEmail' className='form-input' name='email' type='email' required onChange={this.handleChange} value={this.state.email} />
-        </fieldset>
-        
-        <fieldset className='form-group'>
-          <ReactFormLabel htmlFor='formSubject' title='Subject:'/>
-
-          <input id='formSubject' className='form-input' name='subject' type='text' required onChange={this.handleChange} value={this.state.subject} />
-        </fieldset>
-        
-        <fieldset className='form-group'>
-          <ReactFormLabel htmlFor='formMessage' title='Message:' />
-
-          <textarea id='formMessage' className='form-textarea' name='message' required onChange={this.handleChange}></textarea>
-        </fieldset>
-        
-        <div className='form-group'>
-          <input id='formButton' className='btn' type='submit' placeholder='Send message' />
+      <div className="magictime slideLeftReturn">
+      <div className="jumbotron jumbotron-sm">
+    <div className="container">
+        <div className="row">
+            <div clasNames="col-sm-12 col-lg-12">
+                <h1 clasNames="h1">
+                    Let,s Talk <small>Feel free to contact me</small></h1>
+            </div>
         </div>
-      </form>
+    </div>
+</div>
+<div className="container">
+    <div className="row">
+        <div className="col-md-8">
+            <div className="well well-sm">
+                <form onSubmit={this.handleSubmit}>
+                <div className="row">
+                    <div className="col-md-6">
+                        <div className="form-group">
+                            <label htmlFor="formName">
+                                Name</label>
+                            <input type="text" className="form-control" id="formName" name="name"  placeholder="Enter name" ref='formName' required onChange={this.handleChange} value={this.state.name} />
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="formEmail">
+                                Email Address</label>
+                            <div className="input-group">
+                                <span className="input-group-addon"><span className="glyphicon glyphicon-envelope"></span>
+                                </span>
+                                 <input id='formEmail' className='form-control' name='email' type='email' required onChange={this.handleChange} value={this.state.email} /></div>
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="formSubject">
+                                Subject</label>
+                             <input id='formSubject' className='form-control' name='subject' type='text' required onChange={this.handleChange} value={this.state.subject} />
+                        </div>
+                    </div>
+                    <div className="col-md-6">
+                        <div className="form-group">
+                            <label htmlFor="formMessage">
+                                Message</label>
+                            <textarea name="message" id="formMessage" className="form-control" rows="9" cols="25" required onChange={this.handleChange}
+                                placeholder="Message"></textarea>
+                        </div>
+                    </div>
+                    <div className="col-md-12">
+                        <button type="submit" className="btn btn-primary pull-right" id="formButton">
+                            Send Message</button>
+                    </div>
+                </div>
+                </form>
+            </div>
+        </div>
+        <div className="col-md-4">
+            <form>
+            <legend><span className="glyphicon glyphicon-globe"></span> Toronto based</legend>
+            <address>
+                
+                    <i className="fa fa-phone" />
+                <span> (647) 839-8961</span>
+            </address>
+            <address>
+                <strong>Miquel Llabres Riera</strong><br/>
+                <i className="fa fa-envelope" /><a href="mailto:#"> miquel@miquelllabres.com</a>
+            </address>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+
     )
   }
 };
